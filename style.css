@@ -1,10 +1,4 @@
-/* ============================================================
-   PORTFOLIO STYLESHEET — Success Onyibe
-   All vanilla CSS. No libraries or frameworks.
-   ============================================================ */
-
-
-/* ── 1. CUSTOM PROPERTIES (variables) ── */
+/*1. CUSTOM PROPERTIES (variables)*/
 :root {
   --navy:      #0B1120;
   --navy-mid:  #111827;
@@ -26,7 +20,7 @@
 }
 
 
-/* ── 2. RESET & BASE ── */
+/*2. RESET & BASE*/
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -66,7 +60,7 @@ ul {
 }
 
 
-/* ── 3. SKIP LINK (accessibility) ── */
+/*3. SKIP LINK (accessibility)*/
 .skip-link {
   position: absolute;
   top: -100px;
@@ -85,7 +79,7 @@ ul {
 }
 
 
-/* ── 4. NAVIGATION ── */
+/*4. NAVIGATION*/
 header {
   position: sticky;
   top: 0;
@@ -163,7 +157,7 @@ nav {
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 
-/* ── 5. LAYOUT HELPERS ── */
+/*5. LAYOUT HELPERS*/
 .container {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -207,7 +201,7 @@ nav {
 }
 
 
-/* ── 6. BUTTONS ── */
+/* 6. BUTTONS */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
@@ -242,7 +236,7 @@ nav {
 }
 
 
-/* ── 6b. HERO ACTION LINKS (scoped override, hero buttons only) ── */
+/* 6b. HERO ACTION LINKS */
 .hero-actions {
   justify-content: center;
   align-items: center;
@@ -312,7 +306,7 @@ nav {
 }
 
 
-/* ── 7. HERO SECTION ── */
+/*7. HERO SECTION*/
 #hero {
   min-height: 100vh;
   display: flex;
@@ -367,39 +361,62 @@ nav {
 }
 
 .hero-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 4rem;
+  display: none;
 }
 
+/*Hero stats, reset as a running caption line*/
 .hero-stats {
   display: flex;
-  gap: 3rem;
+  align-items: baseline;
   flex-wrap: wrap;
+  row-gap: 0.75rem;
+  column-gap: 0;
+  padding-top: 1.85rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(245, 240, 232, 0.14);
 }
 
 .stat-item {
   display: flex;
-  flex-direction: column;
+  align-items: baseline;
+  flex-direction: row;
+  position: relative;
+  margin-right: 1.85rem;
+  padding-right: 1.85rem;
+}
+
+.stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.15em;
+  width: 1px;
+  height: 0.85em;
+  background: rgba(245, 240, 232, 0.18);
 }
 
 .stat-number {
   font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--offwhite);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--gold);
   line-height: 1;
+  white-space: nowrap;
 }
 
 .stat-label {
-  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
   color: var(--slate);
-  letter-spacing: 0.05em;
-  margin-top: 0.25rem;
+  margin-top: 0;
+  margin-left: 0.4rem;
+  white-space: nowrap;
 }
 
-/* Photo placeholder (for when student adds real photo) */
+
 .hero-photo {
   width: 120px;
   height: 120px;
@@ -422,7 +439,7 @@ nav {
 }
 
 
-/* ── 8. CARDS ── */
+/* 8. CARDS */
 .card {
   background: var(--navy-card);
   border: 1px solid rgba(245, 240, 232, 0.07);
@@ -443,9 +460,7 @@ nav {
   gap: var(--gap);
 }
 
-/* ── 8b. HOME NAV INDEX (scoped override — only fires on grid-3
-   containers whose direct children are .card, i.e. the homepage
-   nav links, not the project cards on the Projects page) ── */
+/* 8b. HOME NAV INDEX */
 .grid-3:has(> .card) {
   display: flex;
   flex-direction: column;
@@ -516,7 +531,7 @@ nav {
 }
 
 
-/* ── 9. SKILLS PAGE ── */
+/* 9. SKILLS PAGE */
 .skill-bar-wrap {
   margin-top: 0.75rem;
 }
@@ -646,7 +661,7 @@ nav {
 }
 
 
-/* ── 11. ACADEMIC PLANNER ── */
+/*11. ACADEMIC PLANNER*/
 .planner-form {
   display: flex;
   gap: 0.75rem;
@@ -816,7 +831,7 @@ nav {
 }
 
 
-/* ── 12. CONTACT PAGE ── */
+/*12. CONTACT PAGE*/
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -933,7 +948,7 @@ nav {
 }
 
 
-/* ── 13. ABOUT PAGE ── */
+/*13. ABOUT PAGE*/
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -1085,7 +1100,7 @@ footer {
 }
 
 
-/* ── 17. MEDIA (video/audio section on projects) ── */
+/*17. MEDIA (video/audio section on projects)*/
 .media-embed {
   width: 100%;
   border-radius: var(--radius);
@@ -1114,11 +1129,6 @@ footer {
 .audio-wrap audio {
   width: 100%;
 }
-
-
-/* ── 18. ANIMATIONS ── */
-/* (removed scroll-triggered fade-in and typewriter cursor) */
-
 
 /* ── 19. RESPONSIVE ── */
 @media (max-width: 768px) {
@@ -1168,8 +1178,9 @@ footer {
     max-width: 200px;
   }
 
-  .hero-stats {
-    gap: 2rem;
+  .stat-item {
+    margin-right: 1.1rem;
+    padding-right: 1.1rem;
   }
 
   .footer-inner {
