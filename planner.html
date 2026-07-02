@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo">S<span>.</span>O</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html" aria-current="page">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <div class="page-hero">
+      <span class="section-label">Academic Planner</span>
+      <h1 class="section-title">Stay On Track</h1>
+      <p style="color:var(--slate); max-width:520px;">
+        Add assignments, deadlines, and study goals. Tasks are saved automatically
+        and will still be here when you come back.
+      </p>
+    </div>
+
+    <div class="container">
+
+      <form class="planner-form" id="planner-form" novalidate>
+        <input
+          type="text"
+          id="task-input"
+          placeholder="What do you need to do? (e.g. Finish COS 101 assignment)"
+          aria-label="Task description"
+          required
+        />
+        <select id="task-priority" aria-label="Priority level">
+          <option value="medium">Medium priority</option>
+          <option value="high">High priority</option>
+          <option value="low">Low priority</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Add Task</button>
+      </form>
+
+      <div class="planner-stats" id="planner-stats"></div>
+
+      <div class="task-filters" role="group" aria-label="Filter tasks">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+        <button class="filter-btn" data-filter="done">Done</button>
+      </div>
+
+      <div id="task-list" aria-live="polite" aria-label="Task list"></div>
+
+      <div class="card" style="margin-top:3rem; border-color:rgba(201,168,76,0.15);">
+        <p style="font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem;">How It Works</p>
+        <ul style="display:flex; flex-direction:column; gap:0.5rem;">
+          <li style="font-size:0.88rem; color:var(--slate);">Type a task, pick a priority, and click Add Task.</li>
+          <li style="font-size:0.88rem; color:var(--slate);">Click the checkbox to mark a task as done.</li>
+          <li style="font-size:0.88rem; color:var(--slate);">Click X to delete a task.</li>
+          <li style="font-size:0.88rem; color:var(--slate);">Tasks are saved in your browser and survive page refreshes.</li>
+          <li style="font-size:0.88rem; color:var(--slate);">Use the filters to view All, Pending, or Done tasks.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2026 Success Onyibe.</p>
+      <p class="footer-note">Software Engineering</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

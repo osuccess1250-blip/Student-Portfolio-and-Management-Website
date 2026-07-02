@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo">S<span>.</span>O</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <div class="page-hero">
+      <span class="section-label">About Me</span>
+      <h1 class="section-title">Who I Am</h1>
+      <p style="color:var(--slate); max-width:520px;">
+        A student who enjoys figuring out how things work.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="about-grid">
+
+        <div>
+          <div class="about-photo">
+            🧑🏾‍💻
+            <!-- <img src="photo.jpg" alt="Success Onyibe" /> -->
+          </div>
+
+          <div class="card" style="margin-top:1.5rem;">
+            <p style="font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem;">Quick Facts</p>
+            <ul style="display:flex; flex-direction:column; gap:0.6rem;">
+              <li style="font-size:0.88rem; color:var(--slate);"> •Delta, Nigeria</li>
+              <li style="font-size:0.88rem; color:var(--slate);"> •100 Level, 2026</li>
+              <li style="font-size:0.88rem; color:var(--slate);"> •Miva Open University</li>
+              <li style="font-size:0.88rem; color:var(--slate);"> •Software Engineering</li>
+              <li style="font-size:0.88rem; color:var(--slate);"> •Currently learning, Creating and Growing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-info">
+
+          <h3>My Story</h3>
+          <p>
+            My name is Onyibe SUccess and I'm a first-year Software Engineering student at
+            Miva Open University in Nigeria. I started my degree in January 2026 and I'm taking
+            courses which introduce various aspects of knowledge, programming, and problem solving.
+          </p>
+          <p style="margin-top:0.75rem;">
+            Before university I had little programming experience. That changed once I started
+            my studies and got curious about what's possible with code and technologies outside 
+            what i am learning within the school. 
+            Now I look forward to assignments because they give me a reason to build things.
+          </p>
+
+          <h3>Career Aspirations</h3>
+          <p>
+            I want to become a software engineer who builds practical tools that solve real problems.
+            I'm interested in how technology is changing finance, so fintech is a possible area I'd like to
+            explore further. For now, my goal is to master the fundamentals and keep building.
+          </p>
+
+          <h3>Educational Background</h3>
+          <table class="edu-table">
+            <thead>
+              <tr>
+                <th>Institution</th>
+                <th>Programme</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Miva Open University</td>
+                <td>B.Sc. Software Engineering</td>
+                <td>In progress (100L)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Technical Skills</h3>
+          <p>Things I'm actively learning and practising:</p>
+
+          <div style="display:flex; flex-direction:column; gap:1.2rem; margin-top:1rem;">
+
+            <div>
+              <div class="skill-bar-label">
+                <span class="skill-name">Python</span>
+                <span>Beginner</span>
+              </div>
+              <p class="skill-desc">Functions, loops, dictionaries, simple programs.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width:40%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="skill-bar-label">
+                <span class="skill-name">HTML</span>
+                <span>Beginner</span>
+              </div>
+              <p class="skill-desc">Semantic markup, forms, tables, links. This site is built with it.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width:55%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="skill-bar-label">
+                <span class="skill-name">CSS</span>
+                <span>Beginner</span>
+              </div>
+              <p class="skill-desc">Styling, flexbox/grid layout, responsive design basics.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width:50%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="skill-bar-label">
+                <span class="skill-name">JavaScript</span>
+                <span>Beginner</span>
+              </div>
+              <p class="skill-desc">DOM manipulation, events, form validation. Learning by doing.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width:35%"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <h3>Hobbies &amp; Interests</h3>
+          <div class="interests-grid">
+            <div class="interest-item"> Finance &amp; Trading</div>
+            <div class="interest-item"> Cooking</div>
+            <div class="interest-item"> Self-directed Learning</div>
+            <div class="interest-item"> How Things Work</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2026 Success Onyibe.</p>
+      <p class="footer-note">Software Engineering</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

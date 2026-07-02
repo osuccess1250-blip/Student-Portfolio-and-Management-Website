@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo">S<span>.</span>O</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <div class="page-hero">
+      <span class="section-label">Projects</span>
+      <h1 class="section-title">Things I've Built</h1>
+      <p style="color:var(--slate); max-width:520px;">
+        Assignments, experiments, and exercises.
+      </p>
+    </div>
+
+    <div class="container">
+
+      <div class="grid-3">
+        <article class="project-card">
+          <div class="project-img"><span>[ screenshot ]</span></div>
+          <div class="project-body">
+            <p class="project-tag">HTML / CSS / JavaScript</p>
+            <h2 class="project-title">This Portfolio Website</h2>
+            <p class="project-desc">
+              A multi-page personal portfolio built from scratch with vanilla HTML, CSS and
+              JavaScript. Includes a task planner, form validation, and a responsive layout.
+              No libraries used.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+              <a href="index.html">Live</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img"><span>[ screenshot ]</span></div>
+          <div class="project-body">
+            <p class="project-tag">Python / Data Structures</p>
+            <h2 class="project-title">Student Grade Tracker</h2>
+            <p class="project-desc">
+              A Python program that stores student names and scores in a dictionary,
+              calculates averages, and sorts results. Practised lists, loops, and dictionaries
+              from COS 101.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img"><span>[ screenshot ]</span></div>
+          <div class="project-body">
+            <p class="project-tag">Python</p>
+            <h2 class="project-title">Simple Interest Calculator</h2>
+            <p class="project-desc">
+              A Python function that takes principal, rate, and time as inputs and returns the
+              simple interest. Includes input validation, tested with multiple scenarios in a
+              Jupyter notebook.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" aria-label="Demo not available yet">Demo (coming soon)</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img"><span>[ screenshot ]</span></div>
+          <div class="project-body">
+            <p class="project-tag">Python</p>
+            <h2 class="project-title">Temperature Converter</h2>
+            <p class="project-desc">
+              A Celsius-to-Fahrenheit converter written as a reusable Python function.
+              Extended to also convert to Kelvin and handle invalid inputs.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="section" style="padding-top:3rem;">
+        <span class="section-label">Media</span>
+        <h2 class="section-title" style="margin-bottom:1rem;">Learning in Progress</h2>
+        <div class="divider"></div>
+        <p style="color:var(--slate); margin-bottom:2rem; max-width:520px;">
+          A walkthrough of how the temperature converter works, and a voice note
+          about what I learned building this site.
+        </p>
+
+        <div class="grid-2">
+
+          <div>
+            <p style="font-size:0.82rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem;">
+              Project
+            </p>
+            <div class="media-embed">
+              <iframe
+                width="560" height="280"
+                src="video.mp4"
+                title="Project walkthrough video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy">
+              </iframe>
+            </div>
+            <p style="font-size:0.8rem; color:var(--slate); margin-top:0.5rem;">
+            </p>
+          </div>
+
+          <div>
+            <p style="font-size:0.82rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem;">
+              Reflection Note
+            </p>
+            <p style="font-size:0.8rem; color:var(--slate);">
+              it has been a great learning experience building this portfolio. I learned how to create a multi-page website using only HTML, CSS, and JavaScript, which was challenging but rewarding. I also practiced responsive design techniques to make sure the site looks good on different screen sizes. Overall, this project helped me solidify my understanding of web development fundamentals and gave me a platform to showcase my work.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2026 Success Onyibe.</p>
+      <p class="footer-note">Software Engineering</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo">S<span>.</span>O</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <div class="page-hero">
+      <span class="section-label">Contact</span>
+      <h1 class="section-title">Say Hello</h1>
+      <p style="color:var(--slate); max-width:520px;">
+        Whether it's about a collaboration, an opportunity, or just a question,
+        I'm happy to hear from you.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p>
+            I'm always open to learning from people in the industry.
+            Drop me a message using the form or reach out directly below.
+          </p>
+
+          <div class="contact-link-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <p style="font-size:0.78rem; color:var(--slate); margin:0;">Email</p>
+              <a href="mailto:successonyibe1@gmail.com">successonyibe1@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-link-item">
+            <div class="contact-icon">🐙</div>
+            <div>
+              <p style="font-size:0.78rem; color:var(--slate); margin:0;">GitHub</p>
+              <a href="https://github.com/" target="_blank" rel="noopener">github.com/successonyibe</a>
+            </div>
+          </div>
+
+          <div class="contact-link-item">
+            <div class="contact-icon">💼</div>
+            <div>
+              <p style="font-size:0.78rem; color:var(--slate); margin:0;">LinkedIn</p>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/successonyibe</a>
+            </div>
+          </div>
+
+          <div class="contact-link-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <p style="font-size:0.78rem; color:var(--slate); margin:0;">Location</p>
+              <span style="color:var(--slate); font-size:0.9rem;">Nigeria</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-success" id="form-success" role="alert">
+            Message sent! I'll get back to you soon.
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" />
+              <span class="form-error" id="name-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+              <span class="form-error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 08012345678" autocomplete="tel" />
+              <span class="form-error" id="phone-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="What would you like to say?"></textarea>
+              <span class="form-error" id="message-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
+              Send Message
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2026 Success Onyibe.</p>
+      <p class="footer-note">Software Engineering</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
