@@ -242,6 +242,76 @@ nav {
 }
 
 
+/* ── 6b. HERO ACTION LINKS (scoped override, hero buttons only) ── */
+.hero-actions {
+  justify-content: center;
+  align-items: center;
+  column-gap: 0;
+}
+
+.hero-actions .btn {
+  position: relative;
+  display: inline-block;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0.3rem 0 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.hero-actions .btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transform: translateX(-50%);
+  transition: width var(--transition);
+}
+
+.hero-actions .btn:hover {
+  transform: none;
+  box-shadow: none;
+  color: var(--offwhite);
+}
+
+.hero-actions .btn:hover::after {
+  width: 100%;
+}
+
+.hero-actions .btn-primary {
+  color: var(--gold);
+  margin-right: 2.5rem;
+}
+
+.hero-actions .btn-primary:hover {
+  color: var(--gold);
+}
+
+.hero-actions .btn-primary::before {
+  content: "";
+  position: absolute;
+  right: -1.35rem;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(245, 240, 232, 0.3);
+  transform: translateY(-50%);
+}
+
+.hero-actions .btn-outline {
+  margin-left: 2.5rem;
+}
+
+
 /* ── 7. HERO SECTION ── */
 #hero {
   min-height: 100vh;
@@ -371,6 +441,71 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
+}
+
+/* ── 8b. HOME NAV INDEX (scoped override — only fires on grid-3
+   containers whose direct children are .card, i.e. the homepage
+   nav links, not the project cards on the Projects page) ── */
+.grid-3:has(> .card) {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(245, 240, 232, 0.12);
+  counter-reset: navindex;
+}
+
+.grid-3:has(> .card) .card {
+  counter-increment: navindex;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 1.5rem;
+  row-gap: 0.35rem;
+  padding: 1.6rem 0.25rem;
+  border: none;
+  border-bottom: 1px solid rgba(245, 240, 232, 0.12);
+  border-radius: 0;
+  background: transparent;
+  transform: none;
+  transition: padding-left var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.grid-3:has(> .card) .card::before {
+  content: counter(navindex, decimal-leading-zero);
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--gold-dim);
+}
+
+.grid-3:has(> .card) .card h3 {
+  flex: 0 1 190px;
+  margin-bottom: 0 !important;
+}
+
+.grid-3:has(> .card) .card p {
+  flex: 1 1 260px;
+}
+
+.grid-3:has(> .card) .card::after {
+  content: "\2192";
+  flex: 0 0 auto;
+  margin-left: auto;
+  font-family: var(--font-mono);
+  color: var(--slate);
+  transition: transform var(--transition), color var(--transition);
+}
+
+.grid-3:has(> .card) .card:hover {
+  background: rgba(201, 168, 76, 0.05);
+  padding-left: 1rem;
+  border-color: rgba(201, 168, 76, 0.3);
+}
+
+.grid-3:has(> .card) .card:hover::after {
+  color: var(--gold);
+  transform: translateX(5px);
 }
 
 /* Grid for 2 columns */
