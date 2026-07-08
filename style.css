@@ -8,17 +8,14 @@
   --offwhite:  #F5F0E8;
   --slate:     #8892A4;
   --white:     #ffffff;
-
   --font-display: Georgia, "Times New Roman", serif;
   --font-body:    system-ui, -apple-system, sans-serif;
   --font-mono:    "Courier New", Courier, monospace;
-
   --radius:   8px;
   --max-w:    1100px;
   --gap:      2rem;
   --transition: 0.25s ease;
 }
-
 
 /*2. RESET & BASE*/
 *, *::before, *::after {

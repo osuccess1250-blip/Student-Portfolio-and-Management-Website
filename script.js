@@ -1,9 +1,4 @@
-/* ============================================================
-   MAIN JAVASCRIPT — Success Onyibe Portfolio
-   ============================================================ */
-
-
-/* ── 1. NAVIGATION (hamburger toggle) ── */
+/* 1. NAVIGATION (hamburger toggle) */
 
 const hamburger = document.getElementById("hamburger");
 const navLinks  = document.getElementById("nav-links");
@@ -25,7 +20,7 @@ if (hamburger && navLinks) {
 }
 
 
-/* ── 2. CONTACT FORM VALIDATION ── */
+/*2. CONTACT FORM VALIDATION */
 
 const contactForm = document.getElementById("contact-form");
 
@@ -80,7 +75,7 @@ function clearErrors() {
 }
 
 
-/* ── 3. ACADEMIC PLANNER ── */
+/*3. ACADEMIC PLANNER*/
 
 const plannerForm = document.getElementById("planner-form");
 
