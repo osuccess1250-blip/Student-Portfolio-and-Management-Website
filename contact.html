@@ -45,7 +45,7 @@
           </p>
 
           <div class="contact-link-item">
-            <div class="contact-icon">📧</div>
+            <div class="contact-icon">✉️</div>
             <div>
               <p style="font-size:0.78rem; color:var(--slate); margin:0;">Email</p>
               <a href="mailto:successonyibe1@gmail.com">o.success1250@miva.edu.ng</a>
@@ -82,17 +82,20 @@
             Message sent! I'll get back to you soon.
           </div>
 
-          <form class="contact-form" id="contact-form" novalidate>
+          <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+
+            <input type="hidden" name="access_key" value="047a9a54-efbd-4334-bc93-ecc7ba19403d" />
+            <input type="hidden" name="redirect" value="https://osuccess1250-blip.github.io/Student-Portfolio-and-Management-Website/contact.html" />
 
             <div class="form-group">
               <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" />
+              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required />
               <span class="form-error" id="name-error" role="alert"></span>
             </div>
 
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
               <span class="form-error" id="email-error" role="alert"></span>
             </div>
 
@@ -104,7 +107,7 @@
 
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Leave a message here"></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Leave a message here" required></textarea>
               <span class="form-error" id="message-error" role="alert"></span>
             </div>
 
