@@ -181,3 +181,32 @@ if (plannerForm) {
     return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
   }
 }
+  //  Dynamic Background Particles Generator
+
+function createParticles(num) {
+  const container = document.getElementById('particle-container');
+  if (!container) return; // Guard clause in case a page doesn't have the container
+
+  for (let i = 0; i < num; i++) {
+    const particle = document.createElement('span');
+    
+    // Generate random sizes between 4px and 12px
+    const size = Math.random() * 8 + 4; 
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    
+    // Random horizontal position across the screen width (0% to 100%)
+    particle.style.left = `${Math.random() * 100}%`;
+    
+    // Randomize speed (duration between 12s and 26s) and spawn delay
+    particle.style.animationDuration = `${Math.random() * 14 + 12}s`;
+    particle.style.animationDelay = `${Math.random() * 8}s`;
+    
+    container.appendChild(particle);
+  }
+}
+
+// Generates random particles.
+let particleCount = 30;
+createParticles(particleCount);
+

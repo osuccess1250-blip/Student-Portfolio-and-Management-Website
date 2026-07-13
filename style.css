@@ -1219,3 +1219,43 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================================
+   Ambient Background Particles Setup
+   ========================================================================== */
+
+/* The outer container spans the entire viewport fixed behind everything */
+.particle-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* Allows user clicks to pass right through to buttons/links */
+  z-index: -1;          /* Sits comfortably behind your main grid layout and cards */
+  overflow: hidden;
+}
+
+/* Base styles shared by all dynamically created particle elements */
+.particle-bg span {
+  position: absolute;
+  background: rgba(201, 168, 76, 0.25); /* Uses your --gold palette with subtle opacity */
+  border-radius: 50%;
+  bottom: -20px;                       /* Starts just beneath the viewable screen edge */
+  animation: floatUp linear infinite;
+}
+
+/* The core movement animation engine */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6; /* Gently fades into view as it floats upward */
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-105vh) translateX(50px); /* Travels past the top of the viewport with a slight drift */
+    opacity: 0; /* Fades out smoothly at the end of its life cycle */
+  }
+}
