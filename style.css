@@ -1220,42 +1220,44 @@ footer {
   }
 }
 
-/* ==========================================================================
-   Ambient Background Particles Setup
-   ========================================================================== */
 
-/* The outer container spans the entire viewport fixed behind everything */
+/* Ambient Background Particle Animation */
 .particle-bg {
   position: fixed;
   inset: 0;
   pointer-events: none; /* Allows user clicks to pass right through to buttons/links */
-  z-index: -1;          /* Sits comfortably behind your main grid layout and cards */
+  z-index: -1;
   overflow: hidden;
 }
 
-/* Base styles shared by all dynamically created particle elements */
+
 .particle-bg span {
   position: absolute;
-  background: rgba(201, 168, 76, 0.25); /* Uses your --gold palette with subtle opacity */
+  background: rgba(201, 168, 76, 0.25);
   border-radius: 50%;
-  bottom: -20px;                       /* Starts just beneath the viewable screen edge */
+  bottom: -20px;
   animation: floatUp linear infinite;
 }
 
-/* The core movement animation engine */
 @keyframes floatUp {
   0% {
     transform: translateY(0) translateX(0);
     opacity: 0;
   }
   15% {
-    opacity: 0.6; /* Gently fades into view as it floats upward */
+    opacity: 0.7; /* Gently fades into view as it floats upward */
   }
   85% {
     opacity: 0.6;
   }
   100% {
-    transform: translateY(-105vh) translateX(50px); /* Travels past the top of the viewport with a slight drift */
-    opacity: 0; /* Fades out smoothly at the end of its life cycle */
+    transform: translateY(-105vh) translateX(50px); /* Travels past the top of the viewport*/
+    opacity: 0; /* Fades out at the end*/
   }
+}
+/* Centered wrapper for the Hero section */
+.hero-cta-wrap {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
