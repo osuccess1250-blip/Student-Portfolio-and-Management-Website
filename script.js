@@ -7,6 +7,7 @@ if (hamburger && navLinks) {
   hamburger.addEventListener("click", function () {
     hamburger.classList.toggle("open");
     navLinks.classList.toggle("open");
+
     hamburger.setAttribute("aria-expanded", navLinks.classList.contains("open"));
   });
 
@@ -26,9 +27,11 @@ const contactForm = document.getElementById("contact-form");
 
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
+    // Prevent default form submission
     e.preventDefault();
     clearErrors();
 
+    // Extract and trim form input values
     const name    = document.getElementById("name").value.trim();
     const email   = document.getElementById("email").value.trim();
     const phone   = document.getElementById("phone").value.trim();
@@ -38,18 +41,19 @@ if (contactForm) {
 
     if (name === "") { showError("name-error", "Please enter your name."); hasError = true; }
 
+    // Validate email format
     if (email === "") {
       showError("email-error", "Please enter your email address."); hasError = true;
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showError("email-error", "Please enter a valid email."); hasError = true;
     }
-
+    // Validate phone format
     if (phone === "") {
       showError("phone-error", "Please enter your phone number."); hasError = true;
     } else if (!/^\+?[0-9]{7,15}$/.test(phone)) {
       showError("phone-error", "Phone must be 7-15 digits."); hasError = true;
     }
-
+    // Validate message is not empty
     if (message === "") { showError("message-error", "Please write a message."); hasError = true; }
 
     if (!hasError) {
@@ -57,7 +61,7 @@ if (contactForm) {
       const successBox = document.getElementById("form-success");
       if (successBox) {
         successBox.classList.add("show");
-        setTimeout(function () { successBox.classList.remove("show"); }, 5000);
+        setTimeout(function () { successBox.classList.remove("show"); }, 15000);
       }
     }
   });
@@ -85,7 +89,6 @@ if (plannerForm) {
 
   renderTasks();
   updateStats();
-
   plannerForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const taskInput     = document.getElementById("task-input");
@@ -110,6 +113,7 @@ if (plannerForm) {
     });
   });
 
+  // Render tasks based on current filter
   function renderTasks() {
     const list = document.getElementById("task-list");
     if (!list) return;
@@ -173,10 +177,8 @@ if (plannerForm) {
       `;
     }
   }
-
   function saveTasks()  { localStorage.setItem("portfolio-tasks", JSON.stringify(tasks)); }
   function loadTasks()  { try { return JSON.parse(localStorage.getItem("portfolio-tasks")) || []; } catch(e) { return []; } }
-
   function escapeHtml(str) {
     return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
   }
@@ -185,7 +187,7 @@ if (plannerForm) {
 
 function createParticles(num) {
   const container = document.getElementById('particle-container');
-  if (!container) return; // Guard clause in case a page doesn't have the container
+  if (!container) return;
 
   for (let i = 0; i < num; i++) {
     const particle = document.createElement('span');
@@ -194,11 +196,9 @@ function createParticles(num) {
     const size = Math.random() * 8 + 4; 
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
-    
-    // Random horizontal position across the screen width (0% to 100%)
     particle.style.left = `${Math.random() * 100}%`;
     
-    // Randomize speed (duration between 12s and 26s) and spawn delay
+    // Randomize speed
     particle.style.animationDuration = `${Math.random() * 14 + 12}s`;
     particle.style.animationDelay = `${Math.random() * 8}s`;
     
@@ -206,7 +206,6 @@ function createParticles(num) {
   }
 }
 
-// Generates random particles.
 let particleCount = 25;
 createParticles(particleCount);
 
