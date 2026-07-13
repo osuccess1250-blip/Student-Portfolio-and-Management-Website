@@ -207,6 +207,6 @@ function createParticles(num) {
 }
 
 // Generates random particles.
-let particleCount = 30;
+let particleCount = 25;
 createParticles(particleCount);
 
